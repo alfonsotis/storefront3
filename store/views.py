@@ -43,7 +43,8 @@ class CollectionViewSet(ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         if Product.objects.filter(collection_id=kwargs['pk']):
-            return Response({'error': 'Collection cannot be deleted because it includes one or more products.'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+            return Response({'error': 'Collection cannot be deleted because it includes one or more products.'},
+                            status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
         return super().destroy(request, *args, **kwargs)
 
@@ -142,13 +143,12 @@ class OrderViewSet(ModelViewSet):
             'id').get(user_id=user.id)
         return Order.objects.filter(customer_id=customer_id)
 
+
 class ProductImageViewSet(ModelViewSet):
     serializer_class = ProductImageserializer
-    
+
     def get_queryset(self):
         return ProductImage.objects.filter(product_id=self.kwargs['product_pk'])
-    
+
     def get_serializer_context(self):
         return {'product_id': self.kwargs['product_pk']}
-    
-
