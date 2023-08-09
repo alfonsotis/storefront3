@@ -18,12 +18,15 @@ django-templated-mail = "*"
 redis = "*"
 pytest-watch = "*"
 locust = "*"
+pytest = "*"
 
 [dev-packages]
 autopep8 = "*"
 pytest = "*"
 pytest-django = "*"
 model-bakery = "*"
+pytest-watch = "*"
+locust = "*"
 
 [requires]
 python_version = "3.9"

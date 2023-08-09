@@ -2,12 +2,12 @@ from locust import HttpUser, task, between
 from random import randint
 
 class Websiteuser(HttpUser):
-    wait_time = between(1, 5)
+    wait_time = between(1, 3)
 
     @task(2)
     def view_products(self):
         print("View products")
-        collection_id = randint(2,6)
+        collection_id = randint(3,6)
         self.client.get(
             f'/store/products/?collection_id={collection_id}', 
             name='/store/products')
@@ -17,7 +17,7 @@ class Websiteuser(HttpUser):
         print('View product details')
         product_id = randint(1,1000)
         self.client.get(
-            f'/store/products/?collection_id={product_id}',
+            f'/store/products/{product_id}',
             name='/store/products/:id')
 
     @task(1)
