@@ -27,6 +27,7 @@ pytest-django = "*"
 model-bakery = "*"
 pytest-watch = "*"
 locust = "*"
+django-silk = "*"
 
 [requires]
 python_version = "3.9"
