@@ -19,6 +19,7 @@ redis = "*"
 pytest-watch = "*"
 locust = "*"
 pytest = "*"
+django-redis = "*"
 
 [dev-packages]
 autopep8 = "*"
