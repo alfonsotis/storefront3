@@ -20,6 +20,7 @@ pytest-watch = "*"
 locust = "*"
 pytest = "*"
 django-redis = "*"
+whitenoise = "*"
 
 [dev-packages]
 autopep8 = "*"
