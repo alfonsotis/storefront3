@@ -219,7 +219,7 @@ LOGGING = {
         },
         'file': {
             'class': 'logging.FileHandler',
-            'filename': 'genaral.log',
+            'filename': 'general.log',
             'formatter': 'verbose'
         }
     },
