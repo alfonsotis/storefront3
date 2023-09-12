@@ -21,6 +21,7 @@ locust = "*"
 pytest = "*"
 django-redis = "*"
 whitenoise = "*"
+waitress = "*"
 
 [dev-packages]
 autopep8 = "*"
